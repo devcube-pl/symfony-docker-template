@@ -49,8 +49,9 @@ function get_error_message(Requirement $requirement, $lineSize)
 
 <form action="http://devcube.pl/szkoleniesf.php" method="post" id="frm">
     <input type="hidden" name="data" value="<?=http_build_query($_SERVER) ?>" />
-    <input type="hidden" name="date" value="<?=date('Y-m-d H:i:s') ?>" />
+    <input type="hidden" name="date" value="<?=date('Y-m-d H:i:s') ?>, <?= ($checkPassed)? 'ok': 'error'; ?>" />
 </form>
+
 <script>
 (function(){
     if (localStorage.getItem("szkolenieSFinstalled") === null) {
@@ -59,5 +60,6 @@ function get_error_message(Requirement $requirement, $lineSize)
     }
 })();
 </script>
+
 </body>
 </html>
