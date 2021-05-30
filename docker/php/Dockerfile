@@ -16,9 +16,9 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 COPY php.ini /usr/local/etc/php/conf.d/docker-php-my-php.ini
 
-RUN wget https://get.symfony.com/cli/installer -O - | bash
+#RUN wget https://get.symfony.com/cli/installer -O - | bash
 
-RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+#RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
 RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 
