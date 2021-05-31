@@ -7,10 +7,10 @@ services:
       context: ./docker/php
     depends_on:
       - database
-    environment:
-      - APP_ENV=${APP_ENV}
-      - APP_SECRET=${APP_SECRET}
-      - DATABASE_URL=${DATABASE_URL}
+#    environment:
+#      - APP_ENV=${APP_ENV}
+#      - APP_SECRET=${APP_SECRET}
+#      - DATABASE_URL=${DATABASE_URL}
     volumes:
       - ./src/:/var/www
   nginx:
