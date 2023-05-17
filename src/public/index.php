@@ -25,7 +25,8 @@ foreach ($requirements as $req) {
 $checkPassed = empty($messages['error']);
 
 if ($checkPassed) {
-    echo 'System jest gotowy do uruchomienia projektu Symfony';
+    echo '<h1 style="background-color:#54f27a; text-align:center;padding:25px;">System jest gotowy do uruchomienia projektu Symfony. Good job!</h1>';
+    phpinfo();
 } else {
     echo 'Your system is not ready to run Symfony projects';
 
