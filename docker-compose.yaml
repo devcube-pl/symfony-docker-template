@@ -7,7 +7,10 @@ services:
       context: ./docker/php
     depends_on:
       - database
-#    environment:
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
 #      - APP_ENV=${APP_ENV}
 #      - APP_SECRET=${APP_SECRET}
 #      - DATABASE_URL=${DATABASE_URL}
